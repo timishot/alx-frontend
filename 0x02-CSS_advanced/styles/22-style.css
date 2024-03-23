@@ -9,7 +9,7 @@
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
-    --text-color: var(--color-black);
+    --text-color: var(--color-white);
     /* Fonts */
     --font-family-base: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
     --font-family-title: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -28,7 +28,7 @@
     --section-header-align: center;
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
-    --section-title-color: var(--color-black);
+    --section-title-color: var(--color-white);
     /* section padding */
     --section-padding: 5rem 0;
     --section-header-padding: 0 0 3rem;
@@ -200,4 +200,22 @@ a:active {
 
 .footer ul {
     text-align: right;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class^="col-"] {
+    float: left;
+    padding: 0.5rem;
+}
+
+
+[data-section-theme="dark"] {
+    --text-color:var(--color-white);
+    --section-title-color: var(--color-white);
+    background-color: var(--color-black);
 }
